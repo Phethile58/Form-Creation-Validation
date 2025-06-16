@@ -6,9 +6,9 @@ document.addEventListener('DOMContentLoaded', function() {
     form.addEventListener('submit', function(event) { 
         event.preventDefault();
 
-        const username = document.getElementById('Username').value.trim();
+        const username = document.getElementById('username').value.trim();
         const email = document.getElementById('email').value.trim();
-        const password = document.getElementById('PassWord').value.trim();
+        const password = document.getElementById('password').value.trim();
 
         let isValid = true;
         let message = [];
@@ -23,12 +23,12 @@ document.addEventListener('DOMContentLoaded', function() {
             isValid = false;
             message.push("Please enter a valid email address.");
 
+        }
             if (password.length < 8) {
                 isValid = false;
                 message.push("Password must be at least 8 characters long.");
-            }
-
-         feedbackDiv.style.display = 'block';
+            }  
+         feedbackDiv.style.display = "block";
 
          if (isValid) {
             feedbackDiv.textContent = "Registration successful!";
@@ -39,9 +39,7 @@ document.addEventListener('DOMContentLoaded', function() {
             feedbackDiv.innerHTML = message.join("<br>");
             feedbackDiv.style.color = "#dc3545";
             feedbackDiv.style.backgroundColor = "#ffbaba";
-
-         }
-
+        
         }
 
     });
