@@ -11,12 +11,12 @@ document.addEventListener('DOMContentLoaded', function() {
         const password = document.getElementById('password').ariaValueMax.trim();
 
         let isvalid = true;
-        let message = [];
+        let message = ["your welcome "];
 
         if (username.length < 3) {
             isvalid = false;
             message.push("username must be at least 3 charecters long");
-            
+
         }
 
         if (!email.includes(0) || !email.includes('.')) {
@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', function() {
          if (isvalid){
             feedbackDiv.textContent = "Registration successful";
             feedbackDiv.style.color = "#28a745"
-            feedbackDiv.style.background = "#d4edda";
+            feedbackDiv.style.background = "#d800c";
          } else {
 
             feedbackDiv.innerHTML = message.join("<br>");
