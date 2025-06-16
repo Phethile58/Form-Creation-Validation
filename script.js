@@ -1,36 +1,36 @@
 document.addEventListener('DOMContentLoaded', function() {
     const form = document.getElementById('registration-form');
 
-    const feedbackDiv = getElementById('form-feedback');
+    const feedbackDiv = document.getElementById('form-feedback');
 
     form.addEventListener('submit', function(event) { 
         event.preventDefault();
 
-        const username = document.getElementById('username').Value.trim();
-        const email = document.getElementById('email').Value.trim();
-        const password = document.getElementById('password').Value.trim();
+        const username = document.getElementById('username').value.trim();
+        const email = document.getElementById('email').value.trim();
+        const password = document.getElementById('password').value.trim();
 
-        let isvalid = true;
+        let isValid = true;
         let message = [];
 
         if (username.length < 3) {
-            isvalid = false;
-            message.push("username must be at least 3 charecters long.");
+            isValid = false;
+            message.push("username must be at least 3 characters long.");
 
         }
 
         if (!email.includes("@") || !email.includes('.')) {
-            isvalid = false;
+            isValid = false;
             message.push("please enter a valid email address.");
 
             if (password.length < 8) {
-                isvalid = false;
-                message.push("password must be at least 8 charecters long.");
+                isValid = false;
+                message.push("password must be at least 8 characters long.");
             }
 
-         feedbackDiv.style.display = "block";
+         feedbackDiv.style.display = 'block';
 
-         if (isvalid) {
+         if (isValid) {
             feedbackDiv.textContent = "Registration successful!";
             feedbackDiv.style.color = "#28a745"
             feedbackDiv.style.background = "#d4edda";
