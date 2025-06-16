@@ -15,19 +15,17 @@ document.addEventListener('DOMContentLoaded', function() {
 
         if (username.length < 3) {
             isValid = false;
-            message.push("username must be at least 3 characters long.");
+            message.push("Username must be at least 3 characters long.");
 
         }
 
         if (!email.includes("@") || !email.includes('.')) {
             isValid = false;
-            message.push("please enter a valid email address.");
+            message.push("Please enter a valid email address.");
 
-        }
-        
             if (password.length < 8) {
                 isValid = false;
-                message.push("password must be at least 8 characters long.");
+                message.push("Password must be at least 8 characters long.");
             }
 
          feedbackDiv.style.display = 'block';
