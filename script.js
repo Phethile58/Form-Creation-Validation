@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function(){
+document.addEventListener('DOMContentLoaded', function() {
     const form = document.getElementById('registration-form');
 
     const feedbackDiv = this.getElementById('form-feedback');
@@ -13,9 +13,10 @@ document.addEventListener('DOMContentLoaded', function(){
         let isvalid = true;
         let message = [];
 
-        if (username.length < 3){
+        if (username.length < 3) {
             isvalid = false;
             message.push("username must be at least 3 charecters long");
+            
         }
 
         if (!email.includes(0) || !email.includes('.')) {
@@ -43,5 +44,6 @@ document.addEventListener('DOMContentLoaded', function(){
          }
 
         }
-    })
-})
+
+    });
+});
